@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuarios</title>
+</head>
+<body>
+    <section id="registro">
+        <h2>Registro de Usuarios</h2>
+        <form id="registroForm">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div>
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            <div>
+                <label for="edad">Edad:</label>
+                <span id="edad">Calculando...</span>
+            </div>
+            <div>
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div>
+                <label for="usuario">Usuario (solo letras y números):</label>
+                <input type="text" id="usuario" name="usuario" pattern="[a-zA-Z0-9]+" required>
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="confirmPassword">Confirmar Contraseña:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div>
+                <label for="enfermedades">¿Has sufrido de enfermedades contagiosas?</label>
+                <select id="enfermedades" name="enfermedades">
+                    <option value="no">No</option>
+                    <option value="si">Sí</option>
+                </select>
+            </div>
+    
+            <div id="enfermedadesContagiosas" style="display: none;">
+                <label for="enfermedadesTexto">Especifica las enfermedades contagiosas:</label>
+                <input type="text" id="enfermedadesTexto" name="enfermedadesTexto">
+            </div>
+    
+            <button type="submit">Registrar</button>
+        </form>
+    </section>
+    
+    <script src="validaciones.js"></script>
+</body>
+</html>
+
